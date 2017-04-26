@@ -1,0 +1,30 @@
+<template>
+	<div class="cell">
+		<div class="cell">
+			<image class="thumb" src="http://t.cn/RGE3AJt"></image>
+        	<text class="title">JavaScript</text>
+        	<text onclick="onClickTitle">点我啊！</text>
+        	<weex-button class="button" title="hello" type="123"></weex-button>
+		</div>
+	</div>
+</template>
+
+<style>
+.cell{margin-top: 8;margin-left: 8;flex-direction: row;}
+.thumb{width:100;height: 100;}
+.title{text-align: center;flex: 1;color: red;}
+.button{align-items: center; width: 100;height: 50;}
+</style>
+
+<script>
+	module.exports = {
+		methods: {
+			onClickTitle: function (e) {
+				var mymodule = require('@weex-module/mymodule');
+        		mymodule.call('api', {}, function(ret) {
+        			console.log('哈哈哈，自定义事件!');
+        		});
+			}
+		}
+	}
+</script>

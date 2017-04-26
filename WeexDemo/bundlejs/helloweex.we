@@ -1,0 +1,24 @@
+<template>
+	<div>
+		<image class="thumbnail" src="http://image.coolapk.com/apk_logo/2015/0817/257251_1439790718_385.png"></image>
+		<text class="title" onClick="onClickTitle">Hello Weex!</text>
+		<weex-button class="button" title="hello">哈哈</weex-button>
+	</div>
+</template>
+<style>
+	.title {color: red; font-size: 50pt;}
+	.thumbnail {width: 100; height: 100;}
+	.button {width: 100; height: 30;}
+</style>
+
+<script>
+	module.exports = {
+		methods:{
+			onClickTitle: function (e) {
+				var mymodule = require('@weex-module/mymodule');
+        			mymodule.call('api', {}, function(ret) {
+        			});
+			}
+		}
+	}
+</script>
