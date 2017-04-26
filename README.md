@@ -1,37 +1,9 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/mnz12138/mnz12138.github.io/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+Weex是一套简单易用的跨平台开发方案，能以web的开发体验构建高性能，可扩展的本机应用，为了做到这些，Weex与Vue合作，使用Vue作为上层框架，并遵循W3C标准实现了统一的JSEngine和DOM API，这样一来，你甚至可以使用其他框架驱动Weex，打造三端一致的native应用程序。
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### 搭建开发环境
+点击->[链接](http://weex.apache.org/cn/guide/set-up-env.html)
 
-### Markdown
+### 集成到iOS
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
-```markdown
-Syntax highlighted code block
-
-# Header 1
-## Header 2
-### Header 3
-
-- Bulleted
-- List
-
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/mnz12138/mnz12138.github.io/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
