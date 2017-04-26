@@ -64,3 +64,9 @@ WXSDKInstance是很重要的一个类，提供了基础的方法和一些回调�
     [_instance destroyInstance];
 }
 
+
+## 备注
+使用weex-toolkit
+
+### 安装
+点>>>[我](http://weex.apache.org/cn/guide/tools/toolkit.html)吧！
