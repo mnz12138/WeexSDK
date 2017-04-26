@@ -34,7 +34,7 @@ WeexSDK在cocoaPods上最新版本可以在[这](https://cocoapods.org/pods/Weex
 Weex支持整体页面渲染和部分渲染两种模式，你需要做的事情是用指定的URL渲染Weex的视图，然后添加到它的父容器上，父容器一般都是viewController
 
 **#import <WeexSDK / WXSDKInstance.h>
- - （void）viewDidLoad 
+-（void）viewDidLoad 
 {
     [super viewDidLoad];
     _instance = [[WXSDKInstance alloc] init];
