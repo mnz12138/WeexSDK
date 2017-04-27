@@ -33,27 +33,28 @@ WeexSDK在cocoaPods上最新版本可以在[这](https://cocoapods.org/pods/Weex
 第四步：呈染weex实例  
 Weex支持整体页面渲染和部分渲染两种模式，你需要做的事情是用指定的URL渲染Weex的视图，然后添加到它的父容器上，父容器一般都是viewController
 
-**#import <WeexSDK / WXSDKInstance.h>
--（void）viewDidLoad 
-{
-    [super viewDidLoad];
-    _instance = [[WXSDKInstance alloc] init];
-    _instance.viewController = self;
-    _instance.frame = self.view.frame; 
-    __weak typeof（self）weakSelf = self;
-    _instance.onCreate = ^（UIView * view）{
-        [weakSelf.weexView removeFromSuperview];
-        [weakSelf.view addSubview：weakSelf.weexView];
-    };
-    _instance.onFailed = ^（NSError * error）{
-        //进程失败
-    };
-    _instance.renderFinish = ^（UIView * view）{
-        // process renderFinish
-    };
-    NSURL * url = [[NSBundle mainBundle] URLForResource：@“main”withExtension：@“js”]
-    [_instance renderWithURL：url options：@ {@“bundleUrl”：[self.url absoluteString]} data：nil];
-}**  
+   #import <WeexSDK / WXSDKInstance.h>
+    -（void）viewDidLoad 
+    {
+        [super viewDidLoad];
+        _instance = [[WXSDKInstance alloc] init];
+        _instance.viewController = self;
+        _instance.frame = self.view.frame; 
+        __weak typeof（self）weakSelf = self;
+        _instance.onCreate = ^（UIView * view）{
+            [weakSelf.weexView removeFromSuperview];
+            [weakSelf.view addSubview：weakSelf.weexView];
+        };
+        _instance.onFailed = ^（NSError * error）{
+            //进程失败
+        };
+        _instance.renderFinish = ^（UIView * view）{
+            // process renderFinish
+        };
+        NSURL * url = [[NSBundle mainBundle] URLForResource：@“main”withExtension：@“js”]
+        [_instance renderWithURL：url options：@ {@“bundleUrl”：[self.url absoluteString]} data：nil];
+    }
+    
 WXSDKInstance是很重要的一个类，提供了基础的方法和一些回调，如renderWithURL，onCreate，onFailed等，参见可以WXSDKInstance.h的声明。  
 
 第五步：销毁Weex实例  
