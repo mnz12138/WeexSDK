@@ -12,6 +12,7 @@
 #import "WeexButton.h"
 #import "WXPushComponent.h"
 #import "WXEventModule.h"
+#import "WXURLRewriteImpl.h"
 
 #import <WeexSDK/WXSDKEngine.h>
 #import <WeexSDK/WXDebugTool.h>
@@ -37,6 +38,8 @@
     [WXSDKEngine initSDKEnvironment];
     //注册图片下载Handler
     [WXSDKEngine registerHandler:[WeexImageDownloader new] withProtocol:@protocol(WXImgLoaderProtocol)];
+    //拦截所有加载url的Handler(image src加载本地图片)
+    [WXSDKEngine registerHandler:[WXURLRewriteImpl new] withProtocol:@protocol(WXURLRewriteProtocol)];
     //注册自定义组件
     [WXSDKEngine registerComponent:@"weex-button" withClass:[WeexButton class]];
     [WXSDKEngine registerComponent:@"a" withClass:[WXPushComponent class]];
