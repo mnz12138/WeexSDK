@@ -26,8 +26,10 @@ WeexSDK在cocoaPods上最新版本可以在[这](https://cocoapods.org/pods/Weex
 	//注册自定义模块和组件，可选  
 	[WXSDKEngine registerComponent：@“MyView”withClass：[MyViewComponent class]];  
 	[WXSDKEngine registerModule：@“event”withClass：[WXEventModule class]];  
-	//注册协议的实现，可选  
-	[WXSDKEngine registerHandler：[WXNavigationDefaultImpl new] withProtocol：@protocol（WXNavigationProtocol）];  
+	//注册图片下载Handler
+    [WXSDKEngine registerHandler:[WeexImageDownloader new] withProtocol:@protocol(WXImgLoaderProtocol)];
+    //拦截所有加载url的Handler(image src加载本地图片)
+    [WXSDKEngine registerHandler:[WXURLRewriteImpl new] withProtocol:@protocol(WXURLRewriteProtocol)];  
 	//设置日志级别  
 	[WXLog setLogLevel：WXLogLevelAll];
 
